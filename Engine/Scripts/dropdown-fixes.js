@@ -144,7 +144,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const subDropdownContent = item.querySelector('.sub-dropdown-content');
 
         item.addEventListener('mouseenter', () => {
-            // Hide all other sub-dropdowns
             subDropdowns.forEach(subItem => {
                 const subContent = subItem.querySelector('.sub-dropdown-content');
                 if (subContent !== subDropdownContent) {
@@ -183,18 +182,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Close submenus when clicking outside on mobile
+    let touchStartX = 0;
+    let touchStartY = 0;
+
     document.addEventListener('touchstart', function(event) {
-        let isClickInsideDropdown = false;
+        touchStartX = event.touches[0].clientX;
+        touchStartY = event.touches[0].clientY;
+    });
 
-        dropdowns.forEach(item => {
-            if (item.contains(event.target)) {
-                isClickInsideDropdown = true;
+    document.addEventListener('touchend', function(event) {
+        const touchEndX = event.changedTouches[0].clientX;
+        const touchEndY = event.changedTouches[0].clientY;
+        const touchDistance = Math.hypot(touchEndX - touchStartX, touchEndY - touchStartY);
+
+        if (touchDistance < 10) {
+            let isClickInsideDropdown = false;
+
+            dropdowns.forEach(item => {
+                if (item.contains(event.target)) {
+                    isClickInsideDropdown = true;
+                }
+            });
+
+            if (!isClickInsideDropdown) {
+                closeAllDropdowns();
             }
-        });
-
-        if (!isClickInsideDropdown) {
-            closeAllDropdowns();
         }
     });
 
