@@ -228,21 +228,3 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-//
-// Move Header up when Scrolling down/
-//
-
-window.addEventListener("scroll", function() {
-    let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    let header = document.querySelector('header');
-
-    if (window.matchMedia("(max-width: 768px)").matches) {
-        if (lastScrollTop > 0) {
-            header.classList.add("scroll-up");
-            header.classList.remove("scroll-down");
-        } else {
-            header.classList.add("scroll-down");
-            header.classList.remove("scroll-up");
-        }
-    }
-});
