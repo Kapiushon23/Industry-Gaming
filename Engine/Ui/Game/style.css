@@ -171,6 +171,7 @@
     height: auto; 
     object-fit: cover;
     border: 2px solid #F0113C;
+    cursor: pointer;
 }
 
 .modal {
