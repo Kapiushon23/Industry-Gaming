@@ -203,15 +203,14 @@ main {
     margin: 0;
 }
 
-
 /* Mobile Optimization */
+
 
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        padding: 5px; /* Smaller padding initially */
-        position: sticky; /* Sticky header */
-        top: 0;
+        padding: 5px; 
+        position: relative; 
         width: 100%;
         transition: padding 0.3s;
         background-color: #000;
@@ -219,7 +218,7 @@ main {
     }
 
     header:focus-within {
-        padding: 10px; /* Expand padding when header is focused */
+        padding: 10px; 
     }
 
     nav {
