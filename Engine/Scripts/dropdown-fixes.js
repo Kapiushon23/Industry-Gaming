@@ -55,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const subDropdownContent = item.querySelector('.sub-dropdown-content');
 
         item.addEventListener('mouseenter', () => {
-            // Hide all other sub-dropdowns
             subDropdowns.forEach(subItem => {
                 const subContent = subItem.querySelector('.sub-dropdown-content');
                 if (subContent !== subDropdownContent) {
