@@ -223,10 +223,102 @@
     box-shadow: 0 4px 8px #F0113C;
 }
 
+.game-trailers-container {
+    background-color: #0b0b0b;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px #F0113C;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.trailer-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.trailer {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px #F0113C;
+    position: relative;
+}
+
+.trailer img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.trailer-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.trailer:hover .trailer-caption {
+    opacity: 1;
+}
 
 
+.trailer-modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
 
+.trailer-modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    max-width: 800px;
+    max-height: 450px;
+    position: relative;
+    margin: 150px auto 0;
+}
 
+.trailer-modal-content iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.close-trailer-modal {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 20px; 
+    right: 20px;
+    cursor: pointer;
+}
 
 .modal {
     display: none;
@@ -359,6 +451,35 @@
     .close-modal {
         font-size: 20px;
         top: 40px;
+        right: 10px;
+    }
+
+    .trailer-gallery {
+        justify-content: center; 
+    }
+
+    .trailer {
+        flex: 1 1 calc(50% - 10px); 
+        max-width: calc(50% - 10px);
+        margin-bottom: 20px; 
+    }
+
+    .trailer img {
+        border-radius: 10px;
+    }
+
+    .trailer-caption {
+        font-size: 0.8rem;
+    }
+
+    .trailer-modal-content {
+        width: 90%; /* Adjust the width */
+        height: 60%; /* Adjust the height */
+    }
+
+    .close-trailer-modal {
+        font-size: 20px;
+        top: 20px;
         right: 10px;
     }
 }

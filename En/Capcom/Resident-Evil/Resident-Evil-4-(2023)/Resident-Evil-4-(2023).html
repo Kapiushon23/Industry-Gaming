@@ -12,6 +12,7 @@
 
     <script src="../../../../Engine/Scripts/image-modal.js"></script> 
     <script src="../../../../Engine/Scripts/dropdown-fixes.js"></script> 
+    <script src="../../../../Engine/Scripts/trailers.js"></script> 
 
 
 </head>
@@ -155,11 +156,33 @@
 
           
 
-           
+            <section class="section game-trailers-container">
+                <h2>Trailers</h2>
+                <div class="trailer-gallery">
+                    <div class="trailer" onclick="openTrailerModal('https://www.youtube.com/embed/j5Ic2z3_xp0')">
+                        <img class="trailer-preview-thumbnail" src="https://img.youtube.com/vi/j5Ic2z3_xp0/0.jpg" alt="Trailer 1">
+                        <div class="trailer-caption">Trailer 1</div>
+                    </div>
+                    <div class="trailer" onclick="openTrailerModal('https://www.youtube.com/embed/YYYYYYYYY')">
+                        <img class="trailer-preview-thumbnail" src="https://img.youtube.com/vi/YYYYYYYYY/0.jpg" alt="Trailer 2">
+                        <div class="trailer-caption">Trailer 2</div>
+                    </div>
+                    <div class="trailer" onclick="openTrailerModal('https://www.youtube.com/embed/ZZZZZZZZZ')">
+                        <img class="trailer-preview-thumbnail" src="https://img.youtube.com/vi/ZZZZZZZZZ/0.jpg" alt="Trailer 3">
+                        <div class="trailer-caption">Trailer 3</div>
+                    </div>
+                </div>
+            </section>
+            
+            <div id="trailerPreviewModal" class="modal" onclick="closeTrailerModal()">
+                <span class="close-modal" onclick="closeTrailerModal()">&times;</span>
+                <div class="trailer-modal-content">
+                    <iframe id="trailerPreview" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
             
             
-            
-            
+                    
 
             <section class="section game-screenshots-container">
                 <h2>Screenshots</h2>
