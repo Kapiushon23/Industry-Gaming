@@ -31,7 +31,8 @@
     text-align: center;
     padding: 40px 20px;
     background-color: #1a1a1a;
-    border-bottom: 2px solid #F0113C;
+    border: 2px solid #F0113C;
+    border-radius: 15px;
 }
 
 .game-header h1 {
@@ -143,21 +144,20 @@
 }
 
 .cover-image .image-container {
-    max-width: 100%; 
+    max-width: 100%;
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 4px 8px #F0113C;
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
 }
 
 .cover-image img {
     width: 100%;
     height: auto;
-    object-fit: contain; 
+    object-fit: contain;
     display: block;
+    border-radius: 15px;
 }
+
 
 .screenshot-gallery {
     display: flex;
@@ -222,6 +222,20 @@
     border-radius: 15px;
     box-shadow: 0 4px 8px #F0113C;
 }
+
+.screenshot-modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+    max-height: 80%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 
 .game-trailers-container {
     background-color: #0b0b0b;
