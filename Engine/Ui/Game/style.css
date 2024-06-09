@@ -167,8 +167,8 @@
 }
 
 .screenshot {
-    flex: 1 1 calc(33.333% - 30px); 
-    max-width: auto;
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
     height: auto;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -216,9 +216,11 @@
 }
 
 .screenshot-gallery {
-    background-color: #0b0b0b;
-    padding: 40px;
-    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px #F0113C;
 }
 
@@ -234,7 +236,6 @@
     left: 50%;
     transform: translateX(-50%);
 }
-
 
 .game-trailers-container {
     background-color: #0b0b0b;
@@ -440,8 +441,7 @@
     .screenshot, .trailer {
         flex: 1 1 calc(50% - 20px);
         max-width: calc(50% - 20px);
-        margin-bottom: 20px;
-    }
+        margin: 0 5px 20px 5px; 
 
     .screenshot img, .trailer img {
         object-fit: cover;
@@ -450,5 +450,6 @@
     .screenshot-modal-content img {
         width: 100%;
         max-width: 100%;
+    }
     }
 }
