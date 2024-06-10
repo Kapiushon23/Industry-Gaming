@@ -163,12 +163,15 @@
     flex-wrap: wrap;
     justify-content: flex-start; 
     gap: 30px;
-    padding: 40px 0;
+    padding: 40px; /* Adds space inside the gallery */
+    box-shadow: 0 4px 8px #F0113C;
+    border-radius: 10px; /* Smooth and round corners */
+    overflow: hidden; /* Ensures content respects the border radius */
 }
 
 .screenshot {
-    flex: 0 1 calc(33.333% - 20px); 
-    max-width: calc(33.333% - 20px);
+    flex: 0 1 calc(33.333% - 60px); /* Adjusted for spacing */
+    max-width: calc(33.333% - 60px); /* Adjusted for spacing */
     height: auto;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -177,6 +180,7 @@
     box-shadow: 0 4px 8px #F0113C;
     position: relative;
 }
+
 
 .screenshot img {
     width: 100%;
@@ -211,7 +215,6 @@
     width: 100%;
     font-size: 2rem;
     color: #F0113C;
-    margin-left: 43px;
     margin-bottom: 20px;
 }
 
@@ -220,7 +223,7 @@
     justify-content: center;
     align-items: center;
     width: 90%;
-    max-width: 800px;
+    max-width: 1500px;
     height: auto;
     max-height: 80%;
     position: relative;
@@ -228,6 +231,9 @@
     transform: translateX(-50%);
 }
 
+.screenshot-modal-content img {
+    border-radius: 15px; 
+}
 
 .game-trailers-container {
     background-color: #0b0b0b;
@@ -300,13 +306,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    max-width: 800px;
+    width: 90%;
+    max-width: 1500px;
     height: auto;
-    max-height: 450px;
+    max-height: 80%;
     position: relative;
-    margin: 0 auto; 
-    transform: translateY(-20%); 
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 15px; 
+    overflow: hidden;
 }
 
 .trailer-modal-content iframe {
@@ -430,8 +438,8 @@
     }
 
     .screenshot, .trailer {
-        flex: 1 1 calc(50% - 20px);
-        max-width: calc(50% - 20px);
+        flex: 1 1 calc(50% - 30px); 
+        max-width: calc(50% - 30px);
         margin: 0 5px 20px 5px; 
     }
 
