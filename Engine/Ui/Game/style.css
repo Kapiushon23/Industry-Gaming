@@ -210,9 +210,9 @@
 
 .screenshot-gallery h2 {
     width: 100%;
-    text-align: center;
     font-size: 2rem;
     color: #F0113C;
+    margin-left: 46px;
     margin-bottom: 20px;
 }
 
