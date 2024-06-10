@@ -313,8 +313,7 @@
     height: auto;
     max-height: 450px;
     position: relative;
-    margin: 0;
-    margin-left: 850px;
+    margin: 0 auto; 
     transform: translateY(-20%); 
 }
 
@@ -364,8 +363,9 @@
     cursor: pointer;
 }
 
-/* Mobile Optimization */
 
+
+/* Mobile Optimization */
 @media (max-width: 768px) {
     .section {
         padding: 20px 10px;
@@ -442,14 +442,15 @@
         flex: 1 1 calc(50% - 20px);
         max-width: calc(50% - 20px);
         margin: 0 5px 20px 5px; 
+    }
 
     .screenshot img, .trailer img {
         object-fit: cover;
     }
 
-    .screenshot-modal-content img {
-        width: 100%;
+    .screenshot-modal-content img,
+    .trailer-modal-content img {
         max-width: 100%;
-    }
+        height: auto;
     }
 }
