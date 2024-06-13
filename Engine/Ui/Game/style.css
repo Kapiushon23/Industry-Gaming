@@ -56,13 +56,15 @@
 .game-info table {
     margin: 0 auto;
     width: 80%;
-    
 }
 
 .game-info th,
 .game-info td {
     padding: 10px;
     font-size: 1.2rem;
+    text-transform: capitalize;
+    text-align: left; 
+    vertical-align: top; 
 }
 
 .game-info th {
@@ -74,12 +76,10 @@
     background-color:  #0b0b0b;
 }
 
-.game-info td:first-child {
-    text-align: right;
-}
-
+.game-info td:first-child,
 .game-info th:first-child {
-    text-align: right;
+    width: 30%; 
+    text-align: left; 
 }
 
 .game-details {
@@ -97,7 +97,6 @@
 .game-details table {
     width: 100%;
     border-collapse: collapse;
-    
 }
 
 .game-details table,
@@ -111,30 +110,16 @@
     padding: 10px;
     text-align: left;
     font-size: 1.2rem;
+    vertical-align: top; 
 }
 
 .game-details th {
     background-color:  #0b0b0b;
     color: #F0113C;
-    
 }
 
 .game-details td {
     background-color:  #0b0b0b;
-}
-
-.additional-info-links {
-    color: white;
-    text-decoration: none;
-}
-
-.additional-info-links:hover {
-    text-decoration: none; 
-    color: #F0113C;
-}
-
-.additional-info-links:active {
-    color: #F0113C;
 }
 
 .cover-image {

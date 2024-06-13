@@ -203,6 +203,20 @@ main {
     margin: 0;
 }
 
+.additional-info-links {
+    color: white;
+    text-decoration: none;
+}
+
+.additional-info-links:hover {
+    text-decoration: none; 
+    color: #F0113C;
+}
+
+.additional-info-links:active {
+    color: #F0113C;
+}
+
 /* Mobile Optimization */
 
 
