@@ -142,11 +142,7 @@
     object-fit: contain;
     display: block;
     border-radius: 15px;
-    transition: transform 0.3s ease; 
-}
-
-.cover-image img:hover {
-    transform: scale(1.03);
+    
 }
 
 .screenshot-gallery {
