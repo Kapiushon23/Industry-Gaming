@@ -361,4 +361,50 @@ main {
         opacity: 1;
         visibility: visible;
     }
+
+    .footer {
+        padding-bottom: 100px; 
+    }
+
+    .discord-container {
+        position: relative; 
+        bottom: 0; 
+        right: auto; 
+        justify-content: center; 
+        margin-top: 20px; 
+    }
+
+    .discord-logo {
+        width: 40px; 
+        margin-right: 0; 
+    }
+
+    .discord-expanded {
+        position: absolute; 
+        bottom: 70px; 
+        left: 50%; 
+        transform: translateX(-50%); 
+        margin-top: 10px; 
+        width: 90%; 
+        max-width: 300px; 
+        background-color: rgba(28, 29, 31, 0.9);
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 20px #F0113C;
+        transition: opacity 0.3s ease-in-out;
+        opacity: 0;
+    }
+
+    .discord-expanded.show {
+        display: flex;
+        flex-direction: column;
+        opacity: 1;
+    }
+
+    .discord-button {
+        display: block;
+        width: 100%; 
+        margin-top: 10px;
+    }
 }
