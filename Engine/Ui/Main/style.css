@@ -188,6 +188,20 @@ main {
     flex: 1;
 }
 
+.additional-info-links {
+    color: white;
+    text-decoration: none;
+}
+
+.additional-info-links:hover {
+    text-decoration: none; 
+    color: #F0113C;
+}
+
+.additional-info-links:active {
+    color: #F0113C;
+}
+
 .footer {
     text-align: center;
     background-color: #000000;
@@ -203,18 +217,64 @@ main {
     margin: 0;
 }
 
-.additional-info-links {
+.discord-container {
+    position: absolute; 
+    bottom: 20px; 
+    right: 30px; 
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.discord-container:hover {
+    transform: scale(1.1);
+}
+
+.discord-logo {
+    width: 60px;
+    height: auto;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.discord-logo:hover {
+    transform: scale(1.2);
+}
+
+.discord-expanded {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(28, 29, 31, 0.9);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #F0113C;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.discord-expanded.show {
+    display: flex;
+    opacity: 1;
+}
+
+.discord-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #F0113C;
     color: white;
     text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.additional-info-links:hover {
-    text-decoration: none; 
-    color: #F0113C;
-}
-
-.additional-info-links:active {
-    color: #F0113C;
+.discord-button:hover {
+    background-color: #c51437;
 }
 
 /* Mobile Optimization */
